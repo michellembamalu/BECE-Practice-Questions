@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="JSS 3 subject practice questions with year and subject filters.">
+  <title>Classroom | JSS 3 Practice</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="questions.js" defer></script>
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="Classroom home"><span class="brand-mark">C</span><span>classroom<span class="brand-period">.</span></span></a>
+    <div class="topbar-note"><span class="status-dot"></span> JSS 3 STUDY ROOM</div>
+  </header>
+
+  <main id="top" class="page-shell">
+    <section class="intro" aria-labelledby="page-title">
+      <div class="intro-copy">
+        <p class="eyebrow">PRACTISE A LITTLE. LEARN A LOT.</p>
+        <h1 id="page-title">Your next<br><span>bright idea</span> starts here.</h1>
+        <p class="intro-text">Choose a subject and a practice year, then work through a focused set of questions at your own pace.</p>
+      </div>
+      <div class="intro-art" aria-hidden="true">
+        <div class="art-sheet"><span class="art-check">✓</span><span class="art-line line-long"></span><span class="art-line"></span><span class="art-line line-short"></span><span class="art-scribble">A+</span></div>
+        <span class="art-sun"></span>
+        <span class="art-caption">KEEP GOING</span>
+      </div>
+    </section>
+
+    <section class="practice" aria-labelledby="practice-title">
+      <div class="section-heading">
+        <div><p class="eyebrow">THE PRACTICE DESK</p><h2 id="practice-title">Pick your subject</h2></div>
+        <p class="question-count" id="question-count" aria-live="polite"></p>
+      </div>
+
+      <div class="filters">
+        <label class="field"><span>Subject</span><select id="subject-select" aria-label="Choose subject"></select></label>
+        <label class="field"><span>Practice year</span><select id="year-select" aria-label="Choose practice year"></select></label>
+        <button id="start-button" class="button button-primary" type="button"><span aria-hidden="true">↗</span> Start practice</button>
+      </div>
+
+      <p class="notice"><span class="notice-mark" aria-hidden="true">i</span><span>Each subject has 60 original curriculum-style practice questions, reused across the year labels. These are not official archived examination papers.</span></p>
+
+      <section id="quiz-panel" class="quiz-panel" aria-label="Question practice" hidden>
+        <div class="quiz-meta"><span id="quiz-subject" class="subject-tag"></span><span id="progress-text"></span></div>
+        <div class="progress-track" role="progressbar" aria-label="Question progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="progress-fill"></span></div>
+        <div id="question-area" class="question-area"></div>
+        <div class="quiz-controls">
+          <button id="previous-button" class="button button-quiet" type="button">← Previous</button>
+          <button id="next-button" class="button button-primary" type="button">Next question →</button>
+          <button id="finish-button" class="button button-finish" type="button" hidden>Finish practice</button>
+        </div>
+      </section>
+
+      <section id="result-panel" class="result-panel" aria-live="polite" hidden></section>
+      <div id="empty-state" class="empty-state"><span class="empty-icon" aria-hidden="true">✳</span><p>Select a subject and practice year to see how many questions are ready.</p></div>
+    </section>
+
+    <footer class="page-footer"><span>One question at a time is still progress.</span><span>JSS 3 · 9 subjects · 2020–2026</span></footer>
+  </main>
+</body>
+</html>
